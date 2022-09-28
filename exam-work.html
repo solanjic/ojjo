@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="exam-work.css">
+</head>
+<body>
+	<svg style="position: absolute; opacity: 0; left: -9999px;" xmlns="http://www.w3.org/2000/svg">
+		<symbol id="logo-ico" viewBox="0 0 218 53"  xmlns="http://www.w3.org/2000/svg">
+			<path d="M45.4247 44.712C40.3847 49.752 34.2167 52.272 26.9207 52.272C19.6247 52.272 13.4327 49.752 8.34467 44.712C3.30467 39.624 0.784668 33.432 0.784668 26.136C0.784668 18.84 3.30467 12.672 8.34467 7.632C13.4327 2.544 19.6247 0 26.9207 0C34.2167 0 40.3847 2.544 45.4247 7.632C50.5127 12.672 53.0567 18.84 53.0567 26.136C53.0567 33.432 50.5127 39.624 45.4247 44.712ZM14.1767 39.096C17.6327 42.504 21.8807 44.208 26.9207 44.208C31.9607 44.208 36.1847 42.504 39.5927 39.096C43.0487 35.64 44.7767 31.32 44.7767 26.136C44.7767 20.952 43.0487 16.656 39.5927 13.248C36.1847 9.792 31.9607 8.064 26.9207 8.064C21.8807 8.064 17.6327 9.792 14.1767 13.248C10.7687 16.656 9.06467 20.952 9.06467 26.136C9.06467 31.32 10.7687 35.64 14.1767 39.096Z"/>
+			<path d="M81.1519 52.272C73.3279 52.272 67.9279 49.2 64.9519 43.056L72.0799 38.88C73.7119 42.432 76.7599 44.208 81.2239 44.208C84.1039 44.208 86.3119 43.512 87.8479 42.12C89.4319 40.68 90.2239 38.664 90.2239 36.072V0.936001H98.5039V36.072C98.5039 41.256 96.8719 45.264 93.6079 48.096C90.3439 50.88 86.1919 52.272 81.1519 52.272Z"/>
+			<path d="M129.71 52.272C121.886 52.272 116.486 49.2 113.51 43.056L120.638 38.88C122.27 42.432 125.318 44.208 129.782 44.208C132.662 44.208 134.87 43.512 136.406 42.12C137.99 40.68 138.782 38.664 138.782 36.072V0.936001H147.062V36.072C147.062 41.256 145.43 45.264 142.166 48.096C138.902 50.88 134.75 52.272 129.71 52.272Z"/>
+			<path d="M209.59 44.712C204.55 49.752 198.382 52.272 191.086 52.272C183.79 52.272 177.598 49.752 172.51 44.712C167.47 39.624 164.95 33.432 164.95 26.136C164.95 18.84 167.47 12.672 172.51 7.632C177.598 2.544 183.79 0 191.086 0C198.382 0 204.55 2.544 209.59 7.632C214.678 12.672 217.222 18.84 217.222 26.136C217.222 33.432 214.678 39.624 209.59 44.712ZM178.342 39.096C181.798 42.504 186.046 44.208 191.086 44.208C196.126 44.208 200.35 42.504 203.758 39.096C207.214 35.64 208.942 31.32 208.942 26.136C208.942 20.952 207.214 16.656 203.758 13.248C200.35 9.792 196.126 8.064 191.086 8.064C186.046 8.064 181.798 9.792 178.342 13.248C174.934 16.656 173.23 20.952 173.23 26.136C173.23 31.32 174.934 35.64 178.342 39.096Z"/>
+			<path d="M36.9888 24.0582L36.9828 24.0057C36.9717 23.9401 36.9518 23.8766 36.9237 23.8177L33.9765 18.5195C33.9765 18.5195 33.6007 18 33.5114 18H20.9524L17.1754 23.6379L17.1307 23.6899L17.1247 23.7143C17.0927 23.7715 17.0665 23.8325 17.0465 23.8961L17.0312 23.9465C16.9876 24.1078 16.9898 24.2801 17.0372 24.44L17.0549 24.4966C17.0786 24.5636 17.1079 24.6249 17.1423 24.6795L26.2737 37.5974L26.2923 37.627C26.3393 37.6945 26.3965 37.7543 26.4662 37.8088L26.5193 37.8457C26.5714 37.8821 26.6258 37.9112 26.7049 37.9434L26.7565 37.9626C26.8458 37.9881 26.9235 38 26.9993 38C27.076 38 27.1509 37.9886 27.2519 37.9595L27.3137 37.9351C27.3742 37.9112 27.4286 37.8816 27.4942 37.8364L27.5352 37.8078C27.6054 37.7522 27.6617 37.6919 27.6928 37.6447L36.8358 24.7132C36.9167 24.5928 36.9694 24.4518 36.9893 24.3029L36.9963 24.2358L37 24.1829L36.9888 24.0582ZM32.0862 23.7143L33.3877 21.0842L34.6882 23.7143H32.0862ZM31.3056 25.2727H34.3933L29.2469 32.5532L31.3056 25.2727ZM30.5419 22.9257L28.6622 20.0779H31.9508L30.5419 22.9257ZM24.521 25.2727H29.479L26.9993 34.04L24.521 25.2727ZM25.0126 23.7143L26.9993 20.7034L28.9859 23.7143H25.0126ZM23.6135 22.6899L22.752 20.0779H25.3369L23.6135 22.6899ZM24.7526 32.5538L19.6058 25.2727H22.6939L24.7526 32.5538ZM21.2617 21.1023L22.1236 23.7143H19.5383L21.2617 21.1023Z"/>
+			<path d="M200.989 24.0582L200.983 24.0057C200.972 23.9401 200.952 23.8766 200.924 23.8177L197.977 18.5195C197.977 18.5195 197.601 18 197.511 18H184.952L181.175 23.6379L181.131 23.6899L181.125 23.7143C181.093 23.7715 181.067 23.8325 181.047 23.8961L181.031 23.9465C180.988 24.1078 180.99 24.2801 181.037 24.44L181.055 24.4966C181.079 24.5636 181.108 24.6249 181.142 24.6795L190.274 37.5974L190.292 37.627C190.339 37.6945 190.396 37.7543 190.466 37.8088L190.519 37.8457C190.571 37.8821 190.626 37.9112 190.705 37.9434L190.756 37.9626C190.846 37.9881 190.923 38 190.999 38C191.076 38 191.151 37.9886 191.252 37.9595L191.314 37.9351C191.374 37.9112 191.429 37.8816 191.494 37.8364L191.535 37.8078C191.605 37.7522 191.662 37.6919 191.693 37.6447L200.836 24.7132C200.917 24.5928 200.969 24.4518 200.989 24.3029L200.996 24.2358L201 24.1829L200.989 24.0582ZM196.086 23.7143L197.388 21.0842L198.688 23.7143H196.086ZM195.306 25.2727H198.393L193.247 32.5532L195.306 25.2727ZM194.542 22.9257L192.662 20.0779H195.951L194.542 22.9257ZM188.521 25.2727H193.479L190.999 34.04L188.521 25.2727ZM189.013 23.7143L190.999 20.7034L192.986 23.7143H189.013ZM187.613 22.6899L186.752 20.0779H189.337L187.613 22.6899ZM188.753 32.5538L183.606 25.2727H186.694L188.753 32.5538ZM185.262 21.1023L186.124 23.7143H183.538L185.262 21.1023Z"/>
+		</symbol>
+		<symbol id="search-ico" viewBox="0 0 24 24">
+			<path d="M21.0002 19L15.8462 13.846C16.799 12.3979 17.1807 10.6477 16.9172 8.93442C16.6538 7.22111 15.764 5.66648 14.4201 4.57154C13.0762 3.47659 11.3739 2.91923 9.64269 3.00735C7.91148 3.09547 6.27453 3.82281 5.04879 5.04855C3.82305 6.27429 3.09571 7.91123 3.00759 9.64245C2.91947 11.3737 3.47684 13.076 4.57178 14.4199C5.66672 15.7637 7.22135 16.6535 8.93467 16.917C10.648 17.1804 12.3981 16.7988 13.8462 15.846L19.0002 21L21.0002 19ZM5.00022 9.99998C5.00022 7.24298 7.24322 4.99998 10.0002 4.99998C12.7572 4.99998 15.0002 7.24298 15.0002 9.99998C15.0002 12.757 12.7572 15 10.0002 15C7.24322 15 5.00022 12.757 5.00022 9.99998Z"/>
+		</symbol>
+		<symbol id="pers-ico" viewBox="0 0 24 24">
+			<path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 14C16.42 14 20 15.79 20 18V20H4V18C4 15.79 7.58 14 12 14Z"/>
+		</symbol>
+		<symbol id="like-ico" viewBox="0 0 18 18">
+			<path d="M8.97364 4.59641C6.21878 0.341121 0.643066 2.65926 0.643066 7.29469C0.643066 10.7755 8.28707 16.2205 8.97364 16.9285C9.66492 16.2205 16.9288 10.7755 16.9288 7.29469C16.9288 2.69441 11.7336 0.341121 8.97364 4.59641Z"/>
+		</symbol>
+		<symbol id="youtube-ico" viewBox="0 0 39 39">
+			<path d="M35.8435 11.2856C35.6493 10.5641 35.269 9.90634 34.7407 9.37804C34.2124 8.84974 33.5546 8.46947 32.8332 8.27528C30.1763 7.55621 19.5001 7.55621 19.5001 7.55621C19.5001 7.55621 8.82381 7.55621 6.16694 8.27528C5.44549 8.46947 4.78769 8.84974 4.25939 9.37804C3.73109 9.90634 3.35082 10.5641 3.15662 11.2856C2.66053 13.9952 2.41978 16.7454 2.43756 19.5C2.41978 22.2545 2.66053 25.0047 3.15662 27.7143C3.35082 28.4358 3.73109 29.0936 4.25939 29.6219C4.78769 30.1502 5.44549 30.5305 6.16694 30.7246C8.82381 31.4437 19.5001 31.4437 19.5001 31.4437C19.5001 31.4437 30.1763 31.4437 32.8332 30.7246C33.5546 30.5305 34.2124 30.1502 34.7407 29.6219C35.269 29.0936 35.6493 28.4358 35.8435 27.7143C36.3396 25.0047 36.5803 22.2545 36.5626 19.5C36.5803 16.7454 36.3396 13.9952 35.8435 11.2856ZM16.0876 24.6187V14.3812L24.9479 19.5L16.0876 24.6187Z"/>
+		</symbol>
+		<symbol id="vc-ico" viewBox="0 0 36 22">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M32.0436 15.1364C32.0436 15.1364 34.9542 18.011 35.6742 19.3412C35.6882 19.3603 35.6992 19.3816 35.7066 19.4042C36 19.8956 36.072 20.2808 35.928 20.5652C35.685 21.035 34.8624 21.2708 34.5834 21.2906H29.439C29.0808 21.2906 28.3356 21.197 27.4284 20.5706C26.7354 20.0864 26.046 19.289 25.3782 18.5096C24.381 17.3522 23.5188 16.3478 22.6458 16.3478C22.5356 16.3475 22.4261 16.3658 22.3218 16.4018C21.6612 16.6106 20.8224 17.552 20.8224 20.0594C20.8224 20.8442 20.2032 21.2906 19.7694 21.2906H17.4132C16.6104 21.2906 12.4308 21.0098 8.72464 17.102C4.18324 12.3176 0.10444 2.71995 0.06484 2.63535C-0.18896 2.01435 0.34384 1.67595 0.91984 1.67595H6.11464C6.81124 1.67595 7.03804 2.09715 7.19644 2.47515C7.38004 2.90895 8.06044 4.64415 9.17644 6.59355C10.9836 9.76515 12.0942 11.0558 12.9816 11.0558C13.1484 11.0562 13.3123 11.0128 13.4568 10.9298C14.616 10.2926 14.4 6.15255 14.346 5.29935C14.346 5.13375 14.3442 3.45075 13.7502 2.63715C13.3254 2.05395 12.6018 1.82715 12.1644 1.74435C12.2814 1.57515 12.5298 1.31595 12.8484 1.16295C13.6422 0.76695 15.0768 0.709351 16.5006 0.709351H17.2908C18.8352 0.730951 19.2348 0.82995 19.7964 0.97215C20.9268 1.24215 20.9484 1.97475 20.8494 4.46955C20.8206 5.18235 20.79 5.98515 20.79 6.93015C20.79 7.13175 20.781 7.35675 20.781 7.58535C20.7468 8.86515 20.7018 10.307 21.6054 10.8992C21.7226 10.9722 21.858 11.0108 21.996 11.0108C22.3092 11.0108 23.247 11.0108 25.7904 6.64575C26.9064 4.71795 27.7704 2.44455 27.8298 2.27355C27.8802 2.17815 28.0314 1.90995 28.215 1.80195C28.3456 1.73246 28.4919 1.69775 28.6398 1.70115H34.7508C35.4168 1.70115 35.8686 1.80195 35.9568 2.05395C36.1044 2.46255 35.928 3.70995 33.138 7.48275C32.6682 8.11095 32.256 8.65455 31.8942 9.12975C29.3652 12.449 29.3652 12.6164 32.0436 15.1364Z"/>
+		</symbol>
+		<symbol id="fb-ico" viewBox="0 0 40 39">
+			<path d="M22.3283 34.1201V20.8016H26.9366L27.6216 15.587H22.3283V12.2655C22.3283 10.7607 22.7583 9.73047 24.9733 9.73047H27.78V5.08134C26.4144 4.93866 25.0417 4.86976 23.6683 4.87497C19.595 4.87497 16.7983 7.29947 16.7983 11.7503V15.5772H12.22V20.7918H16.8083V34.1201H22.3283Z"/>
+		</symbol>
+		<symbol id="telegram-ico" viewBox="0 0 36 36">
+			<path d="M30.9975 5.57554L4.40252 15.831C2.58752 16.56 2.59802 17.5725 4.06952 18.024L10.8975 20.154L26.6955 10.1865C27.4425 9.73203 28.125 9.97653 27.564 10.4745L14.7645 22.026H14.7615L14.7645 22.0275L14.2935 29.0655C14.9835 29.0655 15.288 28.749 15.675 28.3755L18.9915 25.1505L25.89 30.246C27.162 30.9465 28.0755 30.5865 28.392 29.0685L32.9205 7.72654C33.384 5.86804 32.211 5.02654 30.9975 5.57554Z"/>
+		</symbol>
+		<symbol id="etsy-ico" viewBox="0 0 24 24">
+		<path d="M8.564 2.445C8.564 2.12 8.597 1.925 9.154 1.925H16.619C17.919 1.925 18.639 3.035 19.159 5.118L19.579 6.784H20.849C21.079 2.056 21.279 0 21.279 0C21.279 0 18.083 0.36 16.189 0.36H6.64L1.526 0.196V1.566L3.251 1.892C4.461 2.132 4.751 2.388 4.851 3.498C4.851 3.498 4.961 6.768 4.961 12.138C4.961 17.523 4.871 20.748 4.871 20.748C4.871 21.721 4.481 22.081 3.281 22.321L1.559 22.651V24L6.689 23.835H15.239C17.174 23.835 21.629 24 21.629 24C21.734 22.83 22.379 17.52 22.484 16.936H21.284L20 19.846C18.995 22.126 17.524 22.291 15.89 22.291H10.984C9.354 22.291 8.569 21.651 8.569 20.241V12.8C8.569 12.8 12.189 12.8 13.359 12.896C14.271 12.96 14.822 13.221 15.119 14.494L15.509 16.189H16.919L16.829 11.911L17.021 7.606H15.63L15.18 9.496C14.897 10.74 14.7 10.966 13.426 11.096C11.76 11.266 8.611 11.236 8.611 11.236V2.45H8.561L8.564 2.445Z"/>
+		</symbol>
+		<symbol  viewBox="0 0 70 70" >
+			<path id="play-ico" d="M35 0C15.6719 0 0 15.6719 0 35C0 54.3281 15.6719 70 35 70C54.3281 70 70 54.3281 70 35C70 15.6719 54.3281 0 35 0ZM46.2578 35.5391L29.1953 47.9531C29.1018 48.0203 28.9915 48.0605 28.8766 48.0691C28.7618 48.0777 28.6468 48.0545 28.5442 48.0021C28.4417 47.9496 28.3556 47.8699 28.2954 47.7716C28.2352 47.6734 28.2033 47.5605 28.2031 47.4453V22.6328C28.2027 22.5174 28.2343 22.4041 28.2944 22.3056C28.3544 22.207 28.4406 22.127 28.5434 22.0744C28.6461 22.0218 28.7614 21.9987 28.8765 22.0076C28.9916 22.0166 29.1019 22.0572 29.1953 22.125L46.2578 34.5312C46.3384 34.5883 46.4042 34.6638 46.4496 34.7515C46.4949 34.8391 46.5186 34.9364 46.5186 35.0352C46.5186 35.1339 46.4949 35.2312 46.4496 35.3189C46.4042 35.4065 46.3384 35.4821 46.2578 35.5391Z"/>
+		</symbol>
+		<symbol  viewBox="0 0 13 15" >
+			<path id="item-ico" d="M0.75 1.00481L12 7.5L0.749999 13.9952L0.75 1.00481Z"/>
+		</symbol>
+		<symbol viewBox="0 0 4 5">
+			<path id="item-2-ico" d="M4 2.5L0.25 4.66506L0.25 0.334936L4 2.5Z"/>
+		</symbol>
+		<symbol viewBox="0 0 20 16">
+			<path id="phone-ico" d="M17.256 10.253C17.16 9.586 16.645 9.066 15.982 8.911C13.405 8.307 12.759 6.823 12.65 5.177C12.193 5.092 11.38 5 10 5C8.62 5 7.807 5.092 7.35 5.177C7.241 6.823 6.595 8.307 4.018 8.911C3.355 9.067 2.84 9.586 2.744 10.253L2.247 13.695C2.072 14.907 2.962 16 4.2 16H15.8C17.037 16 17.928 14.907 17.753 13.695L17.256 10.253ZM10 13.492C8.605 13.492 7.474 12.372 7.474 10.992C7.474 9.612 8.605 8.492 10 8.492C11.395 8.492 12.526 9.612 12.526 10.992C12.526 12.372 11.394 13.492 10 13.492ZM19.95 4C19.926 2.5 16.108 0.001 10 0C3.891 0.001 0.0729981 2.5 0.0499981 4C0.0269981 5.5 0.0709982 7.452 2.585 7.127C5.526 6.746 5.345 5.719 5.345 4.251C5.345 3.227 7.737 2.98 10 2.98C12.263 2.98 14.654 3.227 14.655 4.251C14.655 5.719 14.474 6.746 17.415 7.127C19.928 7.452 19.973 5.5 19.95 4Z"/>
+		</symbol>
+		<symbol viewBox="0 0 20 20">
+			<path id="post-ico" d="M1.574 5.286L9.074 9.315C9.326 9.45 9.652 9.514 9.98 9.514C10.308 9.514 10.634 9.45 10.886 9.315L18.386 5.286C18.875 5.023 19.337 4 18.44 4H1.521C0.624002 4 1.086 5.023 1.574 5.286ZM18.613 7.489L10.886 11.516C10.546 11.694 10.308 11.715 9.98 11.715C9.652 11.715 9.414 11.694 9.074 11.516C8.734 11.338 1.941 7.777 1.386 7.488C0.996002 7.284 1 7.523 1 7.707V15C1 15.42 1.566 16 2 16H18C18.434 16 19 15.42 19 15V7.708C19 7.524 19.004 7.285 18.613 7.489Z"/>
+		</symbol>
+	</svg>
+
+
+	
+	<!-- PopUp Form -->
+	<div id="newsletter" class="popup-wrapper">
+		<div class="popup-inner">
+			<span class="popup-close">&times;</span>
+			<div class="subscribe-image">
+				<img src="images/mg_popup_3.jpg" class="img-fluid">
+			</div>
+			<div class="subscribe-content">
+				<h2 class="">Полезные советы и персональные предложения</h2>
+				<p>Личный менеджер, Доставка и оформление, Индивидуальный дизайн</p>
+				<div class="form-group subscribe-form-group">
+					<form class="">
+						<input class="form-input" type="email" name="newsletter-email" id="Email" value="" placeholder="email@example.com">
+						<button type="submit" class="btn btn-dark" name="subscribe-newsletter" id="Subscribe">Отправить</button>
+						<p><label><input id="forgetMe" type="checkbox" name="forgetMe">Больше не показывать это сообщение</label></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="thanks-contact" class="popup-wrapper">
+		<div class="popup-inner">
+			<span class="popup-close">&times;</span>
+			<div class="contact-image">
+				<img src="images/mg_popup.jpg" alt="Letter"class="img-fluid">
+			</div>
+			<div class="px-20">
+				<h3>Спасибо</h3>
+				<p>Скоро наши менеджеры свяжутся с Вами.</p>
+				<p class="content"></p>
+			</div>
+		</div>
+	</div>
+	<!-- PopUp Form -->
+
+	<div class="header-holder"></div>
+	<div class="header">
+		<div class="container">
+			<div class="header-menu">
+				<div class="header-menu-nav">
+					<div class="header-menu-item">
+						<a href="#">Контрагентам</a>
+					</div>
+					<div class="header-menu-item">
+						<a href="#">Дизайнерам</a>
+					</div>
+					<div class="header-menu-item">
+						<a href="#">Вакансии</a>
+					</div>
+				</div>
+				<div class="header-menu-logo">
+						<a class="header-logo" href="#">
+							<svg>
+								<use xlink:href="#logo-ico"></use>
+							</svg>
+						</a>
+					</div>
+				<div class="header-menu-user">
+					<div class="header-menu-search">
+						<div class="header-menu-search-icon">
+							<a class="header-menu-search-logo" href="#">
+								<svg>
+									<use xlink:href="#search-ico"></use>
+								</svg>
+							</a>
+						</div>
+						<a class="header-menu-search-button" href="#">Поиск</a>
+					</div>
+					<div class="header-menu-login">
+						<a class="header-menu-enter" href="#">Вход</a>
+						<a class="header-menu-log" href="#">Регистрация</a>
+					</div>
+					<div class="header-menu-person">
+						<div class="header-menu-acount">
+							<a class="header-menu-acount-logo" href="#">
+								<svg>
+									<use xlink:href="#pers-ico"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="header-menu-like">
+							<a class="header-menu-like-logo" href="#">
+								<svg>
+									<use xlink:href="#like-ico"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="header-menu-burger-wrap">
+					<div class="header-menu-burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mob-menu">
+		<div class="mob-menu-content">
+			<div class="mob-menu-nav">
+				<div class="mob-menu-item">
+					<a href="#">Контрагентам</a>
+				</div>
+				<div class="mob-menu-item">
+					<a href="#">Дизайнерам</a>
+				</div>
+				<div class="mob-menu-item">
+					<a href="#">Вакансии</a>
+				</div>
+				<div class="mob-menu-item">
+					<a href="#">Вход</a>
+					<a href="#">Регистрация</a>
+				</div>
+			</div>
+			<div class="mob-menu-user">
+				<div class="mob-menu-acount">
+					<a class="mob-menu-acount-logo">
+						<svg>
+							<use xlink:href="#pers-ico"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="mob-menu-like">
+					<a class="mob-menu-like-logo">
+						<svg>
+							<use xlink:href="#like-ico"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="mob-menu-social">
+				<div class="mob-menu-youtube">
+					<a class="mob-menu-youtube-logo">
+						<svg>
+							<use xlink:href="#youtube-ico"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="mob-menu-vc">
+					<a class="mob-menu-vc-logo">
+						<svg>
+							<use xlink:href="#vc-ico"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="mob-menu-fb">
+					<a class="mob-menu-fb-logo">
+						<svg>
+							<use xlink:href="#fb-ico"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="mob-menu-telegram">
+					<a class="mob-menu-telegram-logo">
+						<svg>
+							<use xlink:href="#telegram-ico"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="mob-menu-etsy">
+					<a class="mob-menu-etsy-logo">
+						<svg>
+							<use xlink:href="#etsy-ico"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="banner-img">
+			<img src="images/bgc-1.png" alt="banner-1">
+		</div>
+		<div class="banner-content">
+			<div class="container">
+				<div class="banner-content-items">
+					<h1 class="banner-content-motto">Долго, дорого, богато!</h1>
+					<div class="banner-content-button">
+						<a href="#">каталог изделий</a>
+					</div>	
+				</div>
+			</div>		
+			<div class="banner-content-items-2">
+				<div class="container">	
+					<div class="banner-brands">
+						<div class="brand"><img src="icons/Rectangle 14.png" alt="brand-1"></div>
+						<div class="brand"><img src="icons/Rectangle 14.png" alt="brand-2"></div>
+						<div class="brand"><img src="icons/Rectangle 14.png" alt="brand-3"></div>
+						<div class="brand"><img src="icons/Rectangle 14.png" alt="brand-4"></div>
+						<div class="brand"><img src="icons/Rectangle 14.png" alt="brand-5"></div>
+						<div class="brand"><img src="icons/Rectangle 14.png" alt="brand-6"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="container">
+		<div class="catalog">
+			<p>К мероприятиям</p>
+			<h2>Настоящая красота здесь!</h2>
+			<div class="catalog-menu">
+				<a href="#">
+					<span>Свадьба</span>
+				</a>
+				<a href="#">
+					<span>МУЖУ</span>
+				</a>
+				<a href="#">
+					<span>жене</span>
+				</a>
+				<a href="#">
+					<span>партнеру</span>
+				</a>
+				<a href="#">
+					<span>коллекции</span>
+				</a>
+				<a href="#">
+					<span>редкость</span>
+				</a>
+			</div>
+			<div class="catalog-items">
+				<a class="catalog-items-img" href="#">
+					<img src="images/Ring.png" alt="">
+					<p>кольца</p>
+				</a>
+				<a class="catalog-items-img" href="#">
+					<img src="images/Earings.png" alt="">
+					<p>cерьги</p>
+				</a>
+				<a class="catalog-items-img" href="#">
+					<img src="images/Colums.png" alt="">
+					<p>подвески</p>
+				</a>
+				<a class="catalog-items-img" href="#">
+					<img src="images/stud.png" alt="">
+					<p>запонки</p>
+				</a>
+				<a class="catalog-items-img" href="#">
+					<img src="images/Braslets.png" alt="">
+					<p>браслеты</p>
+				</a>
+				<a class="catalog-items-img" href="#">
+					<img src="images/Watch.png" alt="">
+					<p>часы</p>
+				</a>
+			</div>
+		</div>
+	</section>
+	<div class="banner-2">
+		<div class="banner-2-img">
+			<img src="images/Rectangle 6.png" alt="">
+		</div>
+		<div class="banner-2-wrap">
+			<div class="container">
+				<div class="banner-2-wrap-content">
+					<h3>Не знаете, что выбрать?</h3>
+					<h2>Посетите наши салоны в Москве</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut duis tortor vitae pellentesque egestas quam pulvinar. Pellentesque porttitor velit sit pellentesque. Suspendisse donec pretium id dignissim. Dignissim ultrices eget orci viverra. Egestas quis et ut ultrices imperdiet lectus nulla tempus. Pharetra lorem sem purus nisi libero viverra ipsum.</p>
+					<a class="banner-2-btn" href="#">
+						<p>наши салоны</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="blog">
+			<h3>Полезные статьи</h3>
+			<h2>Лучшие советы по подбору дорогих подарков</h2>
+			<div class="blog-pages owl-carousel">
+				<a class="blog-pages-img" href="#">
+					<img src="images/Rectangle 5.png" alt="">
+					<p>Как выбрать часы для своей будущей жены</p>
+				</a>
+				<a class="blog-pages-img" href="#">
+					<img src="images/Rectangle 5 (1).png" alt="">
+					<p>Запонки для мужа: 7 ключевых правил покупки аксессуара</p>
+				</a>
+				<a class="blog-pages-img" href="#">
+					<img src="images/Rectangle 5 (2).png" alt="">
+					<p>Как выбрать обручальные кольца молодоженам</p>
+				</a>
+			</div>
+			<a class="blog-button" href="#">читать наш блог</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="social-block">
+			<p>#ojjo_jewerly</p>
+			<h2>Мы в социальных сетях</h2>
+			<div class="social-video">
+				<div class="social-video-img">
+					<img src="images/img--hover.png" alt="">
+					<a class="social-video-play" href="#">
+						<svg>
+							<use xlink:href="#play-ico"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="social-video-img">
+					<img src="images/gallery__image.png" alt="">
+				</div>
+				<div class="social-video-img">
+					<img src="images/gallery__image (1).png" alt="">
+				</div>
+				<div class="social-video-img">
+					<img src="images/gallery__image (2).png" alt="">
+				</div>
+				<div class="social-video-img">
+					<img src="images/gallery__image (3).png" alt="">
+				</div>
+				<div class="social-video-img">
+					<img src="images/Rectangle 8.png" alt="">
+					<a class="social-video-play" href="#">
+						<svg>
+							<use xlink:href="#play-ico"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="banner-3">
+		<div class="container">
+			<div class="banner-3-content">
+				<h3>Полезные советы и персональные предложения</h3>
+				<h2>Эксклюзивная рассылка</h2>
+				<div class="banner-3-content-info">
+					<div class="banner-3-content-tab">
+						<div class="banner-3-line">
+							<div class="banner-3-line-point">
+								<svg class="first">
+									<use xlink:href="#item-ico"></use>
+								</svg>
+								<svg class="second">
+									<use xlink:href="#item-2-ico"></use>
+								</svg>
+							</div>
+							<span>Личный менеджер</span>
+						</div>
+						<div class="banner-3-line">
+							<div class="banner-3-line-point">
+								<svg class="first">
+									<use xlink:href="#item-ico"></use>
+								</svg>
+								<svg class="second">
+									<use xlink:href="#item-2-ico"></use>
+								</svg>
+							</div>
+							<span>Доставка и оформление</span>
+						</div>
+						<div class="banner-3-line">
+							<div class="banner-3-line-point">
+								<svg class="first">
+									<use xlink:href="#item-ico"></use>
+								</svg>
+								<svg class="second">
+									<use xlink:href="#item-2-ico"></use>
+								</svg>
+							</div>
+							<span>Индивидуальный дизайн</span>
+						</div>
+					</div>
+					<div class="banner-3-form">
+						<div class="banner-3-form-holder">
+							<form action="">
+								<input type="email" placeholder="Ваш e-mail">
+								<span class="email-fake">Ваш e-mail</span>
+							</form>
+							<form action="">
+								<button type="submit">отправить</button>
+							</form>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-content-column">
+					<div class="footer-column">
+						<div class="title">Полезные ссылки</div>
+						<a class="column-1-item" href="#">Доставка</a>
+						<a class="column-1-item" href="#">Оплата</a>
+						<a class="column-1-item" href="#">Акции</a>
+						<a class="column-1-item" href="#">Политика конфиденциальности</a>
+					</div>
+					<div class="footer-column">
+						<div class="title">оплата</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec, pellentesque.</p>
+						<div class="payment">
+							<div class="visa-icon">
+								<img src="images/Visa.png" alt="">
+							</div>
+							<div class="visa-icon">
+								<img src="images/Master.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="footer-column">
+						<div class="title">контакты</div>
+						<div class="contact-number">
+							<svg class="first">
+								<use xlink:href="#phone-ico"></use>
+							</svg>
+							<a href="tel:88122345655">8 (812) 234-56-55</a>
+						</div>
+						<div class="contact-number">
+							<svg class="first">
+								<use xlink:href="#phone-ico"></use>
+							</svg>
+							<a href="tel:88122345655">8 (812) 234-56-55</a>
+						</div>
+						<div class="contact-email">
+							<svg class="first">
+								<use xlink:href="#post-ico"></use>
+							</svg>
+							<a href="#">ojjo@ojjo.ru</a>
+						</div>
+					</div>
+					<div class="footer-column">
+						<div class="title">социальные сети</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec, pellentesque.</p>
+						<div class="social">
+							<div class="social-youtube">
+								<a class="social-youtube-logo" href="#">
+									<svg>
+										<use xlink:href="#youtube-ico"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="social-vc">
+								<a class="social-logo" href="#">
+									<svg>
+										<use xlink:href="#vc-ico"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="social-fb">
+								<a class="social-fb-logo" href="#">
+									<svg>
+										<use xlink:href="#fb-ico"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="social-telegram">
+								<a class="social-telegram-logo" href="#">
+									<svg>
+										<use xlink:href="#telegram-ico"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="social-etsy">
+								<a class="social-etsy-logo" href="#">
+									<svg>
+										<use xlink:href="#etsy-ico"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-content-bottom">
+					<div class="footer-bottom">(c) 2020 OJJO jewelry</div>
+					<div class="footer-bottom">
+						<a href="#">Договор публичной офферты</a>
+					</div>
+					<div class="footer-bottom">
+						<a href="#">Контрагентам</a>
+					</div>
+					<div class="footer-bottom">Сделано Figma.info</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<!-- jQuery -->
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<!-- jQuery -->
+	<script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>	
+	<script src="js/script.js"></script>
+</body>
+
+<!-- <script src="common-exam.js"></script> -->
+</html>
+
